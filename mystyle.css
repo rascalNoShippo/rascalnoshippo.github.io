@@ -1,0 +1,261 @@
+body{
+     margin: 0 ;
+     padding:  3em 0 ;
+     background-image: url("dots.png") ;
+     background-size: 12px 12px;
+     font-size:15pt;
+    }
+
+* html body{
+     overflow: hidden;
+    }
+
+.header1{
+     position: fixed !important;  
+     position: absolute;  
+     top: 5px;  
+     left: 0;  
+     width: 100%;  
+     height: 3.5em; 
+     background-color: #80D5FF;  
+     color: #fff;
+     font-size:10.5pt;
+    }
+
+.header2{
+     position: fixed !important;  
+     position: absolute;  
+     font-size: 14pt ;
+     font-family: 'メイリオ' ;
+     top: 0;  
+     left: 0;  
+     width: 100%;  
+     height: 5px; 
+     background-color: #0080C0;  
+     color: #fff;  
+    }
+
+.icon{
+     position: fixed !important;  
+     position: absolute;  
+     top:0.65em;
+     left:10px;
+     width: 40px;  
+     height: 40px; 
+    }
+
+.title{
+     position: fixed !important;  
+     position: absolute;
+     top:5px;
+     left:10px;
+     width: 100%;  
+     height: 48px; 
+     font-size:10.5pt;
+    }
+
+.sub{
+     padding:1.5px 0 0 0;
+     border-top:1px solid #0080C0;
+     position: fixed !important;  
+     position: absolute;
+     top:2.19em;
+     left:10px;
+     width: 22.4em;  
+     height: 1.5em; 
+     font-size:10.5pt;
+     font-family:'メイリオ';
+    }
+
+.head_menu{
+     position: fixed !important;  
+     position: absolute;
+     top:1.3em;
+     right:10px;
+     width: 50%;  
+     height:55px;
+     text-align:right;
+     font-size:10.5pt;
+     font-family:'メイリオ';
+    }
+
+.footer{
+     border-top:1px #0080C0 solid;
+     position: fixed !important;  
+     position: absolute;  
+     bottom: 0;  
+     left: 0;  
+     width: 100%;  
+     height: 2em; 
+     background-color: #80D5FF;  
+     color: #fff;
+     font-size:10.5pt;
+     font-family: 'メイリオ';
+    }
+
+#intro{
+     margin:0 10%;
+     color:#660000;
+     font-family:'メイリオ';
+    }
+
+#about{
+     margin:50px 10%;
+     color:#000000;
+     font-family:serif;
+    }
+
+.maincontents{
+     background-color: rgba(0,0,0,0.05);
+     border:rgba(0,0,0,0.1) 0.5px solid;
+     border-radius:20px;
+     margin:30px 5%;
+     padding:10px 5%;
+     font-family:serif;
+    }
+
+h1{
+     font-size:150%;
+     font-family:'メイリオ';
+     font-weight:normal;
+     text-shadow:0.06em 0.06em 0 #000000;
+     border:1px solid #660000;
+     background-color:#bb9988;
+     width:9.2em;
+     color:#ffffff;
+    }
+
+h2{
+     font-size:150%;
+     font-family:"hg正楷書体-pro";
+     font-weight:normal;
+     border-bottom:1px solid #0080C0;
+     width:100%;
+     text-shadow:0.1em 0.1em 0.15em #000000;
+    }
+
+h3{
+     font-size:120%;
+     font-family:'メイリオ';
+     font-weight:bold;
+     border:1px solid #000000;
+     padding:0 0.6em;
+    }  
+
+.cent_ital{
+     font-family:"times new roman";
+     font-style:italic;
+     font-weight:bold;
+     font-size:150%;
+    }
+
+.segoe-ui{
+     font-family:"Segoe UI";
+     font-weight:bold;
+    }
+
+hr{
+     border: none;
+     border-bottom: 3px #0080C0 dotted;
+    }
+
+p{
+     text-indent: 1em;
+    }
+
+table{
+     border: 1px #660000 solid;
+     border-collapse:collapse;
+     margin: 1.5em;
+     background-color:#eee0cc;
+     color:#660000;
+    }
+
+#dotted{
+     border-bottom: 1px #660000 dotted;
+    }
+
+th{
+     width:2em;
+     text-align:right;
+     font-family:serif;
+    }
+
+td{
+     width:13em;
+    }
+
+td,tr,th{
+     padding:3px;
+     font-size:90%;
+    }
+
+a.link{
+     color:#3366ff;
+     font-family:'MS PMINCHO';
+    }
+
+a.link:hover{
+     color:#3366ff;
+     font-family:'HGPgothicE';
+    }
+
+a.link:active{
+     font-family:'HGPgothicE';
+     color:#ff0000;
+    }
+
+.hiragana{
+     padding:0 1.7em;
+     font-size:50%;
+    }
+
+.menulink{
+     color:#000000;
+     margin:0 10px 0 0;
+    }
+
+.menulink:hover{
+     font-weight:bold;
+    }
+
+.menulink:active{
+     color:#ff0000;
+     font-weight:bold;
+    }
+
+.footlink{
+     color:#ffffff;
+    }
+
+.footlink:hover{
+     font-weight:bold;
+    }
+
+.footlink:active{
+     font-weight:bold;
+     color:#ff0000;
+    }
+div#in{
+     display: inline-block;
+     _display: inline;
+    }
+#size{
+     color:#3366ff;
+     font-size:80%;
+     font-family:'MS PGOTHIC';
+    }
+#size:hover{
+     color:#ffffff;
+     font-size:80%;
+     font-family:'MS PGOTHIC';
+     background:#3366ff;
+     text-decoration:none;
+    }
+#size:active{
+     color:#ffffff;
+     font-size:80%;
+     font-family:'MS PGOTHIC';
+     background:#ff0000;
+     text-decoration:none;
+    }
