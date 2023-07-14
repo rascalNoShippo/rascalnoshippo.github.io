@@ -1,7 +1,7 @@
 body{
      margin: 0 ;
      padding:  3em 0 ;
-     background-image: url("dots.png") ;
+     background-image: url("../files/dots.png") ;
      background-size: 12px 12px;
      font-size:15pt;
     }
@@ -26,7 +26,7 @@ body{
      position: fixed !important;  
      position: absolute;  
      font-size: 14pt ;
-     font-family: 'ƒƒCƒŠƒI' ;
+     font-family: 'ãƒ¡ã‚¤ãƒªã‚ª' ;
      top: 0;  
      left: 0;  
      width: 100%;  
@@ -64,10 +64,10 @@ body{
      width: 22.4em;  
      height: 1.5em; 
      font-size:10.5pt;
-     font-family:'ƒƒCƒŠƒI';
+     font-family:'ãƒ¡ã‚¤ãƒªã‚ª';
     }
 
-.head_menu{
+#head_menu{
      position: fixed !important;  
      position: absolute;
      top:1.3em;
@@ -76,7 +76,7 @@ body{
      height:55px;
      text-align:right;
      font-size:10.5pt;
-     font-family:'ƒƒCƒŠƒI';
+     font-family:'ãƒ¡ã‚¤ãƒªã‚ª';
     }
 
 .footer{
@@ -90,13 +90,13 @@ body{
      background-color: #80D5FF;  
      color: #fff;
      font-size:10.5pt;
-     font-family: 'ƒƒCƒŠƒI';
+     font-family: 'ãƒ¡ã‚¤ãƒªã‚ª';
     }
 
 #intro{
      margin:0 10%;
      color:#660000;
-     font-family:'ƒƒCƒŠƒI';
+     font-family:'ãƒ¡ã‚¤ãƒªã‚ª';
     }
 
 #about{
@@ -104,6 +104,11 @@ body{
      color:#000000;
      font-family:serif;
     }
+
+#start-arrow:hover {
+     cursor: pointer;
+}
+
 
 .maincontents{
      background-color: rgba(0,0,0,0.05);
@@ -116,7 +121,7 @@ body{
 
 h1{
      font-size:150%;
-     font-family:'ƒƒCƒŠƒI';
+     font-family:'ãƒ¡ã‚¤ãƒªã‚ª';
      font-weight:normal;
      text-shadow:0.06em 0.06em 0 #000000;
      border:1px solid #660000;
@@ -127,7 +132,7 @@ h1{
 
 h2{
      font-size:150%;
-     font-family:"hg³²‘‘Ì-pro";
+     font-family:"hgæ­£æ¥·æ›¸ä½“-pro";
      font-weight:normal;
      border-bottom:1px solid #0080C0;
      width:100%;
@@ -136,7 +141,7 @@ h2{
 
 h3{
      font-size:120%;
-     font-family:'ƒƒCƒŠƒI';
+     font-family:'ãƒ¡ã‚¤ãƒªã‚ª';
      font-weight:bold;
      border:1px solid #000000;
      padding:0 0.6em;
