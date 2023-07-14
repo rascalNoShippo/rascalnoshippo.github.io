@@ -23,7 +23,7 @@ export const createHeaderFooter = (() => {
       </a>
     </div>
     <div style="padding:0.23em 0.23em 50px 50px;text-align:right;">
-      <a href="docs/about.html" class="footlink">このホームページについて</a>
+      <a href="/docs/about.html" class="footlink">このホームページについて</a>
     </div>
   `);
 })();
