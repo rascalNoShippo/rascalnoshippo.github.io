@@ -1,3 +1,9 @@
+import { DATA } from "../data/contents.js";
+import { createHeaderFooter } from "./headerFooter.js";
+
+createHeaderFooter();
+
+
 /**
  * 指定のパラメーターを取得する
  * @param {string} pathName 
@@ -64,7 +70,7 @@ number && (() => {
   const linkToTop = document.createElement("a");
   linkToTop.classList.add("menulink");
   linkToTop.insertAdjacentText("beforeend", "トップページ");
-  linkToTop.setAttribute("href", "./index.html");
+  linkToTop.setAttribute("href", "../index.html");
   headMenu?.appendChild(linkToTop);
 
   const selector = document.createElement("select");

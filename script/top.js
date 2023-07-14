@@ -1,3 +1,10 @@
+import { FIXED_SENTENCE, DATA } from "../data/contents.js";
+import { createHeaderFooter } from "./headerFooter.js";
+import { startArrowAction } from "./arrow.js";
+
+createHeaderFooter();
+startArrowAction();
+
 DATA.contents.forEach((e, i) => {
   const tr = document.createElement("tr");
   const th = document.createElement("th");
@@ -5,7 +12,7 @@ DATA.contents.forEach((e, i) => {
   const a = document.createElement("a");
   const number = i + 1;
   th.innerText = `${number}.`;
-  a.setAttribute("href", `content.html?c=${number}`);
+  a.setAttribute("href", `./docs/content.html?c=${number}`);
   a.classList.add("link");
   a.innerText = `${e.title}（${e.prefecture}）`;
   td.appendChild(a);

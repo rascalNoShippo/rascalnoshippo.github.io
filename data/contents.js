@@ -1,24 +1,7 @@
-class Content {
-  /**
-   * @param {string} title 
-   * @param {string} titleKana 
-   * @param {string} titleEn 
-   * @param {string} prefecture 
-   * @param {string} description 
-   * @param {Array<string>} pictureFiles 
-   */
-  constructor(title, titleKana, titleEn, prefecture, description, pictureFiles) {
-    this.title = title;
-    this.titleKana = titleKana;
-    this.titleEn = titleEn;
-    this.prefecture = prefecture;
-    this.description = description;
-    this.pictureFiles = pictureFiles;
-  }
-}
+import { Content } from "./ContentClass.js";
 
 /** @type {{pageTitle: string, headerTop: string, headerBottom: string, topPageH1: string, topDescription: HTMLParagraphElement}} */
-const FIXED_SENTENCE = (() => {
+export const FIXED_SENTENCE = (() => {
   const topDescription = document.createElement("p");
   topDescription.insertAdjacentHTML("beforeend", `
       このホームページでは，日本各地の様々な観光名所の中から一生に一度は行っておきたい，いわゆる“<b>隠れた名所</b>”を選んで10か所紹介していきます。
@@ -33,7 +16,7 @@ const FIXED_SENTENCE = (() => {
 })();
 
 /** @type {{directoryOfPictures: string, contents: Array<Content>}} */
-const DATA = {
+export const DATA = {
   directoryOfPictures: "pict/",
   contents: [
     {
