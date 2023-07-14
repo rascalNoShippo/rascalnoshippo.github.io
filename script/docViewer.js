@@ -1,27 +1,15 @@
-import { DATA } from "../data/data.js";
+import { DATA } from "../data/Data.js";
+import { getPathParam } from "./getPathParam.js";
 import { createHeaderFooter } from "./headerFooter.js";
 
 
-/**
- * 指定のパラメーターを取得する
- * @param {string} pathName 
- * @returns {string?}
- */
-const getPathParam = pathName => {
-  const allPaths = location.search;
-  if (allPaths.substring(0, 1) != "?") return null;
-  const paths = allPaths.substring(1).split("&").map(e => e.split("="));
-  for (const path of paths) {
-    if (path[0] === pathName) return path[1];
-  }
-  return null;
-}
-
+/** クエリ文字列(1オリジン) */
 const number = getPathParam("c");
 
 number && (() => {
   const content = DATA.contents[+number - 1];
     
+  // ページが見つからない場合 早期リターン
   if (!content) {
     const message = "ページが見つかりません";
     document.getElementById("title")?.insertAdjacentText("afterbegin", message);
@@ -29,22 +17,24 @@ number && (() => {
     return;
   }
 
+  // タイトル、説明文を挿入
   document.title = `${number}. ${content.titleEn}`;
   document.getElementById("title")?.insertAdjacentText("afterbegin", `${content.title}（${content.prefecture}）`);
   document.getElementById("titleKana")?.insertAdjacentText("beforeend", content.titleKana);
   document.getElementById("description")?.insertAdjacentText("beforeend", content.description);
-  const imgTags = content.pictureFiles.map(path => {
+  
+  // 画像を挿入
+  const imgTags = content.picturePaths().map(path => {
     const img = document.createElement("img");
-    img.setAttribute("src", `../${DATA.directoryOfPictures}${path}`);
+    img.setAttribute("src", path);
     img.addEventListener("load", function() {
       this.height *= 0.5;
     });
     return img;
   });
-  const pictureFilesNumber = imgTags.length;
   document.getElementById("mainPicture")?.appendChild(imgTags[0]);
   const subPictures = document.getElementById("subPictures");
-  for (let i = 1; i < pictureFilesNumber; i++) {
+  for (let i = 1; i < imgTags.length; i++) {
     const div = document.createElement("div");
     div.classList.add("subPicture");
     const img = imgTags[i];
@@ -57,7 +47,8 @@ number && (() => {
   const headMenu = document.getElementById("head_menu");
   const contents = DATA.contents;
 
-  if (number && +number < contents.length) {
+  // 次頁へのリンクを作成(最終ページの場合は作成しない)
+  if (number && contents[+number]) {
     const linkToNext = document.createElement("a");
     linkToNext.classList.add("menulink");
     linkToNext.insertAdjacentText("beforeend", `>>「${contents[+number].title}」へ`);
@@ -65,12 +56,14 @@ number && (() => {
     headMenu?.appendChild(linkToNext);
   }
 
+  // トップページへのリンクを作成
   const linkToTop = document.createElement("a");
   linkToTop.classList.add("menulink");
   linkToTop.insertAdjacentText("beforeend", "トップページ");
-  linkToTop.setAttribute("href", "../index.html");
+  linkToTop.setAttribute("href", "/index.html");
   headMenu?.appendChild(linkToTop);
 
+  // プルダウンメニューを作成
   const selector = document.createElement("select");
   contents.forEach((e, i) => {
     const option = document.createElement("option");
