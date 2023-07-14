@@ -1,4 +1,4 @@
-import { FIXED_SENTENCE, DATA } from "../data/contents.js";
+import { FIXED_SENTENCE, DATA } from "../data/data.js";
 import { createHeaderFooter } from "./headerFooter.js";
 import { startArrowAction } from "./arrow.js";
 

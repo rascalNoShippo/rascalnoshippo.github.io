@@ -1,3 +1,4 @@
+import { AUTHOR } from "./Author.js";
 import { Content } from "./ContentClass.js";
 
 /** @type {{pageTitle: string, headerTop: string, headerBottom: string, topPageH1: string, topDescription: HTMLParagraphElement}} */
@@ -9,7 +10,7 @@ export const FIXED_SENTENCE = (() => {
   return {
     pageTitle: "ホームページ",
     headerTop: "Sightseeing Attraction in Japan",
-    headerBottom: "黒沢なおのホームページ制作",
+    headerBottom: `${AUTHOR.name}のホームページ制作`,
     topPageH1: "日本全国の観光名所",
     topDescription: topDescription
   };

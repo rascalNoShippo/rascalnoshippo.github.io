@@ -1,4 +1,5 @@
-import { FIXED_SENTENCE } from "../data/contents.js";
+import { AUTHOR } from "../data/Author.js";
+import { FIXED_SENTENCE } from "../data/data.js";
 
 export const createHeaderFooter = () => {
   document.querySelector("header")?.insertAdjacentHTML("afterbegin", `
@@ -15,8 +16,8 @@ export const createHeaderFooter = () => {
 
   document.querySelector("footer")?.insertAdjacentHTML("afterbegin", `
     <div style="padding:0.23em 5px;float:left;">
-      <a href="javascript:void(0);" onclick="location.href='mailto:14es028@ms.dendai.ac.jp'" class="footlink">
-        黒沢なお&nbsp;&lt;14es028@ms.dendai.ac.jp&gt;
+      <a href="javascript:void(0);" onclick="location.href='mailto:${AUTHOR.email}'" class="footlink">
+        ${AUTHOR.name}&nbsp;&lt;${AUTHOR.email}&gt;
       </a>
     </div>
     <div style="padding:0.23em 0.23em 50px 50px;text-align:right;">
