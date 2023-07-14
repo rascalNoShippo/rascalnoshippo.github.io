@@ -1,7 +1,9 @@
 import { AUTHOR } from "../data/Author.js";
 import { FIXED_SENTENCE } from "../data/data.js";
 
-export const createHeaderFooter = () => {
+
+
+export const createHeaderFooter = (() => {
   document.querySelector("header")?.insertAdjacentHTML("afterbegin", `
     <div class="header1"></div>
     <div class="header2"></div>
@@ -21,10 +23,7 @@ export const createHeaderFooter = () => {
       </a>
     </div>
     <div style="padding:0.23em 0.23em 50px 50px;text-align:right;">
-      <a href="./docs/about.html" class="footlink">このホームページについて</a>
+      <a href="\/docs/about.html" class="footlink">このホームページについて</a>
     </div>
   `);
-};
- 
-// ファイルが直接読まれた場合に実行する
-createHeaderFooter();
+})();

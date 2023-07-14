@@ -1,8 +1,6 @@
 import { DATA } from "../data/data.js";
 import { createHeaderFooter } from "./headerFooter.js";
 
-createHeaderFooter();
-
 
 /**
  * 指定のパラメーターを取得する
