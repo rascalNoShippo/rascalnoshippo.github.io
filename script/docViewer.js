@@ -1,4 +1,4 @@
-import { DATA } from "../data/data.js";
+import { DATA } from "../data/Data.js";
 import { createHeaderFooter } from "./headerFooter.js";
 import { getPathParam } from "./getPathParam.js";
 

@@ -1,5 +1,5 @@
 import { AUTHOR } from "../data/Author.js";
-import { DATA } from "../data/data.js";
+import { DATA } from "../data/Data.js";
 
 export const createHeaderFooter = () => {
   document.querySelector("header")?.insertAdjacentHTML("afterbegin", `
