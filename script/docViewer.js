@@ -20,9 +20,9 @@ number && (() => {
   document.getElementById("title")?.insertAdjacentText("afterbegin", `${content.title}（${content.prefecture}）`);
   document.getElementById("titleKana")?.insertAdjacentText("beforeend", content.titleKana);
   document.getElementById("description")?.insertAdjacentText("beforeend", content.description);
-  const imgTags = content.pictureFiles.map(path => {
+  const imgTags = content.picturePaths().map(path => {
     const img = document.createElement("img");
-    img.setAttribute("src", `../${DATA.directoryOfPictures}${path}`);
+    img.setAttribute("src", path);
     img.addEventListener("load", function() {
       this.height *= 0.5;
     });
