@@ -19,6 +19,7 @@ export const startArrowAction = () => {
 	startArrow?.addEventListener("mouseup", function (){
 		const src = this.getAttribute("src");
 		src && this.setAttribute("src", src.replace("_push", "_on"));
-		location.href = "/docs/content.html?c=1";
 	});
+
+	startArrow?.addEventListener("click", () => location.href = "/docs/content.html?c=1");
 };

@@ -1,5 +1,6 @@
 export class Content {
   /**
+   * コンテンツの情報を格納する
    * @param {string} title - タイトル
    * @param {string} titleKana - タイトルのふりがな
    * @param {string} titleEn - タイトルの英語表記
@@ -24,7 +25,8 @@ export class Content {
     this.pictureFileNames = pictureFileNames;
     this.directoryOfPictures = directoryOfPictures;
   }
-  
+
+  /** 画像のパス */
   static #path = "/pict/";
   
   /**
