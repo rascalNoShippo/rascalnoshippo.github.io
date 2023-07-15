@@ -1,23 +1,8 @@
 import { DATA } from "../data/data.js";
 import { createHeaderFooter } from "./headerFooter.js";
+import { getPathParam } from "./getPathParam.js";
 
 createHeaderFooter();
-
-
-/**
- * 指定のパラメーターを取得する
- * @param {string} pathName 
- * @returns {string?}
- */
-const getPathParam = pathName => {
-  const allPaths = location.search;
-  if (allPaths.substring(0, 1) != "?") return null;
-  const paths = allPaths.substring(1).split("&").map(e => e.split("="));
-  for (const path of paths) {
-    if (path[0] === pathName) return path[1];
-  }
-  return null;
-}
 
 const number = getPathParam("c");
 

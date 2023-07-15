@@ -1,4 +1,4 @@
-import { FIXED_SENTENCE, DATA } from "../data/data.js";
+import { DATA } from "../data/data.js";
 import { createHeaderFooter } from "./headerFooter.js";
 import { startArrowAction } from "./arrow.js";
 
@@ -21,9 +21,9 @@ DATA.contents.forEach((e, i) => {
   document.getElementById("contentsList")?.appendChild(tr);
 });
 
-document.title = FIXED_SENTENCE.pageTitle;
-document.getElementById("h1Title")?.insertAdjacentText("afterbegin", FIXED_SENTENCE.topPageH1);
+document.title = DATA.fixedSentence.pageTitle;
+document.getElementById("h1Title")?.insertAdjacentText("afterbegin", DATA.fixedSentence.topPageH1);
 document.getElementById("topDescription")?.insertAdjacentHTML(
   "beforeend", 
-  FIXED_SENTENCE.topDescription.innerHTML
+  DATA.fixedSentence.topDescription.innerHTML
 );

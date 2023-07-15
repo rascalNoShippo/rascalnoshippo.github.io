@@ -1,15 +1,15 @@
 import { AUTHOR } from "../data/Author.js";
-import { FIXED_SENTENCE } from "../data/data.js";
+import { DATA } from "../data/data.js";
 
 export const createHeaderFooter = () => {
   document.querySelector("header")?.insertAdjacentHTML("afterbegin", `
     <div class="header1"></div>
     <div class="header2"></div>
     <div class="title">
-      <span class="cent_ital">${FIXED_SENTENCE.headerTop}</span>
+      <span class="cent_ital">${DATA.fixedSentence.headerTop}</span>
       <br>
       <div class="sub">
-        <span>${FIXED_SENTENCE.headerBottom}</span>
+        <span>${DATA.fixedSentence.headerBottom}</span>
       </div>
     </div>
   `);
