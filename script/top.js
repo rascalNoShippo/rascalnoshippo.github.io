@@ -2,7 +2,6 @@ import { DATA } from "../data/data.js";
 import { createHeaderFooter } from "./headerFooter.js";
 import { startArrowAction } from "./arrow.js";
 
-createHeaderFooter();
 startArrowAction();
 
 DATA.contents.forEach((e, i) => {

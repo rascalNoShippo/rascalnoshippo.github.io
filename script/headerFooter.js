@@ -26,5 +26,4 @@ export const createHeaderFooter = () => {
   `);
 };
  
-// ファイルが直接読まれた場合に実行する
 createHeaderFooter();

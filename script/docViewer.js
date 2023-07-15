@@ -2,7 +2,6 @@ import { DATA } from "../data/data.js";
 import { createHeaderFooter } from "./headerFooter.js";
 import { getPathParam } from "./getPathParam.js";
 
-createHeaderFooter();
 
 const number = getPathParam("c");
 
